@@ -5,7 +5,7 @@ class EmailProcessor
 
   def process
     UserMailer.with(email: @email.from[:email])
-              .email
+              .send_email
               .deliver_now
   end
 end
